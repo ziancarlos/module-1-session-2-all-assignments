@@ -25,4 +25,4 @@ if jumlahUang < hasilTotal:
 elif jumlahUang == hasilTotal:
     print("Terima kasih")
 else:
-    print(f"Uang kembali anda {jumlahUang - hasilTotal}")
+    print(f"Uang kembalian anda {jumlahUang - hasilTotal}")

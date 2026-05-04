@@ -32,8 +32,7 @@ reward = 0
 # - Penggunaan internet minimal 2 jam/hari
 # - Menjawab "ya" untuk kesediaan
 
-# if ...
-
+if (usia >= 18 and usia <= 45) and kota in ["jakarta", "bandung", "surabaya"] and internet_harian >= 2 and bersedia == "ya" :
     layak = True
     print(f"\n{nama} lolos sebagai responden.")
 
@@ -42,16 +41,16 @@ reward = 0
     # Jika 3 ≤ internet_harian < 5 -> reward = 35000
     # Jika < 3 -> reward = 20000
 
-    # if ...
-        reward = ...
-    # elif ...
-        reward = ...
-    # else:
-        reward = ...
+    if internet_harian >= 5:
+        reward = 50000
+    elif 3 <= internet_harian and internet_harian < 5:
+        reward = 35000
+    else:
+        reward = 20000
 
     # TODO: Cetak ringkasan hasil
     print(f"Estimasi reward untuk {nama} adalah Rp{reward:,}")
-# else:
+else:
     print(f"\nMaaf {nama}, Anda tidak memenuhi kriteria responden.")
 
 print("\n=== Proses Seleksi Selesai ===")
